@@ -6,10 +6,22 @@ LA = AL = AK = KA = IG = JK = 1
 
 a = [["MN", "NM", "NK", "KN", "IF", "FI", "KG", "GK", "JG", "GJ", "CD", "DC", "DE", "ED", "CB", "BC", "ML", "LM", "AI", "IA", "AH", "HA", "AB", "BA",
       "FE", "EF", "LA", "AL", "AK", "KA", "IG", "JK"], [6, 6, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1]]
-b = [[], []]
+b = []
 c = []
 
 # print(a[0][0],a[1][0])
+
+def sortlist(listarray):
+    #for j in range(len(listarray[1])):
+     #   if listarray[][j] 
+
+    sorted(listarray, key=lambda x: x[1], reverse=False)
+    print(listarray)
+  
+
+
+
+
 Initial = input("Enter First Letter:")
 print("Username is: " + Initial)
 
@@ -24,7 +36,10 @@ for j in range(len(a[0])):
             # .insert(mystring_value)
 
 
-print(b)
+sortlist(b)
+
+#print(b)
+
 
 
 #print("Username is: " + username)
