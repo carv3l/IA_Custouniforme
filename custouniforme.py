@@ -11,7 +11,10 @@ b = []
 c = []
 
 # print(a[0][0],a[1][0])
-
+mystring_value_soma=0
+Final = ""
+boolean = 0
+Keyword ="FOUND"
 
 def sortlist(listarray):
     listarray.sort(key=lambda x: x[1])
@@ -19,35 +22,38 @@ def sortlist(listarray):
     return listarray
 
 
-def iteration(Initial):
+def iteration(Initial,value):
     for j in range(len(a[0])):
         if Initial in a[0][j]:
             mystring = a[0][j]
             mystring_value = a[1][j]
             if mystring[0] == Initial:
                 # print(mystring)
-                b.append([mystring, mystring_value])
+                b.append([mystring, mystring_value+value])
                 # .insert(mystring_value)
-
+def remove(listarray):
+    mystring_value_soma = listarray[0][1]
+    del listarray[0]
+    return int(mystring_value_soma)
 
 def tupple(operation,listarray):
     if operation == 1:
         mystring = listarray[0][0]
+        if mystring[1] == Final:
+            mystring = "FOUND"
+            return mystring
         #mystring_value = a[1][j]I
 
         return mystring[1]
     if operation == 2:
-
         for j in range(len(listarray[0])):
-                mystring = listarray[0][j]
-                if mystring.isalpha()
-                print("Mystring",mystring)
-                value = listarray[1][j]
-                letter = str(mystring)[1]
-                print(letter)
-                c.append([letter, value])
-                # .insert(mystring_value)
-        print(c)
+                mystring = listarray[j][0]
+                if str(mystring).isalpha():
+                    print("Mystring",mystring)
+                    value = listarray[1][j]
+                    c.append([mystring[1], value])
+                    # .insert(mystring_value)
+                print("C:",c)
     
 
 
@@ -55,16 +61,24 @@ def tupple(operation,listarray):
 
 
 Initial = input("Enter First Letter:")
-iteration(Initial)
+print("Username is: " + Final)
+Final = input("Enter Letter to Find:")
+print("Final is: " + Final)
+while boolean != 1:
+    iteration(Initial,mystring_value_soma)
 # print("Username is: " + Initial)
+    array_sorted = sortlist(b)
+    Initial = tupple(1,array_sorted)
+    tupple(2,array_sorted)
+    mystring_value_soma = remove(array_sorted)
+    if Initial == "FOUND":
+        boolean = 1
 
-array_sorted = sortlist(b)
 
-Initial = tupple(1,array_sorted)
-tupple(2,array_sorted)
-iteration(Initial)
-sortlist(b)
-isal
+##sortlist(b)
+
+
+
 #print(array_sorted)
 
 
