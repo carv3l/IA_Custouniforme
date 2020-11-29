@@ -46,13 +46,10 @@ def tupple(operation,listarray):
 
         return mystring[1]
     if operation == 2:
-        print("Array",len(listarray))
-        for j in range(len(listarray)):
+        for j in range(len(listarray)): #Array Size
                 mystring = listarray[j][0]
-                if str(mystring).isalpha():
-                    value = listarray[j][1]
-                    c.append([mystring[1], value])
-                    # .insert(mystring_value)
+                value = listarray[j][1]
+                c.append([mystring[1], value])
                 print("C:",c)
     
 
