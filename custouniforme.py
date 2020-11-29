@@ -50,7 +50,7 @@ def tupple(operation,listarray):
                 mystring = listarray[j][0]
                 value = listarray[j][1]
                 c.append([mystring[1], value])
-                print("C:",c)
+        print("C:",c)
     
 
 
@@ -66,8 +66,8 @@ while boolean != 1:
 # print("Username is: " + Initial)
     array_sorted = sortlist(b)
     Initial = tupple(1,array_sorted)
-    tupple(2,array_sorted)
     mystring_value_soma = remove(array_sorted)
+    tupple(2,array_sorted)
     if Initial == "FOUND":
         boolean = 1
 
