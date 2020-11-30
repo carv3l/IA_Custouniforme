@@ -1,3 +1,9 @@
+import os
+
+
+os.remove("your_file.txt")
+###DECLARAÇÃO DE VARIAVEIS####
+
 MN = NM = 6
 NK = KN = IF = FI = KG = GK = 4
 JG = GJ = CD = DC = DE = ED = CB = BC = 3
@@ -15,10 +21,14 @@ mystring_value_soma=0
 Final = ""
 boolean = 0
 Keyword ="FOUND"
+contador = 0
+
+
+###########################FUNÇÕES############################################
 
 def sortlist(listarray):
     listarray.sort(key=lambda x: x[1])
-    print(listarray)
+   # print("This is Sorted",listarray)
     return listarray
 
 
@@ -36,6 +46,15 @@ def remove(listarray):
     del listarray[0]
     return int(mystring_value_soma)
 
+def generatetofile(c_list,contador):
+    with open('your_file.txt', 'a') as f:
+        for item in c_list:
+            f.write(str(contador))
+            f.write(" | ")
+            f.write("%s" % item)
+        f.write("\n")
+              
+
 def tupple(operation,listarray):
     if operation == 1:
         mystring = listarray[0][0]
@@ -46,12 +65,15 @@ def tupple(operation,listarray):
 
         return mystring[1]
     if operation == 2:
+        c = []
         for j in range(len(listarray)): #Array Size
                 mystring = listarray[j][0]
                 value = listarray[j][1]
                 c.append([mystring[1], value])
-        print("C:",c)
+        print("",contador,"|",c)
+        generatetofile(c,contador)
     
+
 
 
 # key=lambda x: x[1]
@@ -61,15 +83,20 @@ Initial = input("Enter First Letter:")
 print("Username is: " + Final)
 Final = input("Enter Letter to Find:")
 print("Final is: " + Final)
+
+
 while boolean != 1:
+    contador+=1
     iteration(Initial,mystring_value_soma)
-# print("Username is: " + Initial)
     array_sorted = sortlist(b)
+    tupple(2,array_sorted)
     Initial = tupple(1,array_sorted)
     mystring_value_soma = remove(array_sorted)
-    tupple(2,array_sorted)
-    if Initial == "FOUND":
+    if Initial == "FOUND":    
         boolean = 1
+
+
+
 
 
 ##sortlist(b)
@@ -79,7 +106,7 @@ while boolean != 1:
 #print(array_sorted)
 
 
-# print(b)
+
 
 
 # print("Username is: " + username)
