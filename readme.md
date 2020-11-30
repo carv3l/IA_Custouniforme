@@ -10,6 +10,17 @@ Python 3.9
 
 Apenas correr o programa
 É gerado um ficheiro ``` your_file.txt ```
+
+### Examples
+
+Exemplo de um Output do ficheiro, neste caso é uma procura de I para A
+```
+0 | ['I'][0]
+1 | ['G', 1]['A', 2]['F', 4]
+2 | ['A', 2]['I', 2]['F', 4]['J', 4]['K', 5]
+```
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
