@@ -19,7 +19,10 @@ Exemplo de um Output do ficheiro, neste caso é uma procura de I para A
 1 | ['G', 1]['A', 2]['F', 4]
 2 | ['A', 2]['I', 2]['F', 4]['J', 4]['K', 5]
 ```
+## Notas
 
+O código ainda não está perfeito, mas o rough está presente
+Após aprovação do Professor Responsável,irá se proceder à iteração por uma versão melhor
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
