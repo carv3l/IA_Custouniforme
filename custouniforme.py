@@ -24,7 +24,7 @@ Keyword ="FOUND"
 contador = 0
 
 
-###########################FUNÇÕES############################################
+###########################        FUNÇÕES              ############################################
 
 def sortlist(listarray):
     listarray.sort(key=lambda x: x[1])
@@ -48,9 +48,9 @@ def remove(listarray):
 
 def generatetofile(c_list,contador):
     with open('your_file.txt', 'a') as f:
+        f.write(str(contador))
+        f.write(" | ")
         for item in c_list:
-            f.write(str(contador))
-            f.write(" | ")
             f.write("%s" % item)
         f.write("\n")
               
@@ -78,12 +78,15 @@ def tupple(operation,listarray):
 
 # key=lambda x: x[1]
 
+#########################################             START OF CODE           ######################################
 
 Initial = input("Enter First Letter:")
 print("Username is: " + Final)
 Final = input("Enter Letter to Find:")
 print("Final is: " + Final)
 
+c = [[Initial , 0]]
+generatetofile(c,contador)
 
 while boolean != 1:
     contador+=1
