@@ -4,7 +4,7 @@ Isto permite agilizar a procura por custo uniforme
 
 ## Requisitos
 
-Python 3.9
+Python 3.9 ou 3.7
 
 ## Usage
 
