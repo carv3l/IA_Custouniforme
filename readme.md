@@ -15,9 +15,14 @@ Apenas correr o programa
 
 Exemplo de um Output do ficheiro, neste caso é uma procura de I para A
 ```
-0 | ['I'][0]
+0 | ['I', 0]
 1 | ['G', 1]['A', 2]['F', 4]
 2 | ['A', 2]['I', 2]['F', 4]['J', 4]['K', 5]
+
+SOLUCAO 
+['I', 'A']
+CUSTO 
+2
 ```
 ## Notas
 
