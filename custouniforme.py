@@ -1,7 +1,13 @@
 import os
 import re
 
-os.remove("your_file.txt")
+
+
+try:
+    os.remove("your_file.txt")
+except:
+    print("NO FILE FOUND, NO PROBLEM")
+
 ###DECLARAÇÃO DE VARIAVEIS####
 
 MN = NM = 6
@@ -29,7 +35,7 @@ contador = 0
 
 def sortlist(listarray):
     listarray.sort(key=lambda x: x[1])
-    print("This is Sorted", listarray)
+    #print("This is Sorted", listarray)
     return listarray
 
 def iteration(Initial, value):
@@ -80,7 +86,7 @@ def tupple(operation, listarray):
             mystring = listarray[j][0]
             value = listarray[j][1]
             c.append([mystring[1], value])
-    #   print("",contador,"|",c)
+        print("",contador,"|",c)
         generatetofile(c, contador)
 
  
@@ -96,7 +102,7 @@ def Scalate(order):
             if order in line and partname is None:
                 x = line
                 partname = x[0:-1]
-    print("LINE IS:", partname)
+  #  print("LINE IS:", partname)
 
 
 def Scalated(order):
@@ -111,19 +117,19 @@ def Scalated(order):
                 x = line
                 partname = x[0:-1]
     for index in index_list:
-        print("LINES:", line_list[index-1], line_list[index])
+    #    print("LINES:", line_list[index-1], line_list[index])
         letter = line_list[index-1]
         number = letter[0:3]
         letter = letter[0:14]
 
         cost = line_list[index]
         cost = cost.split(',')
-        print("Custo",cost)
+    #    print("Custo",cost)
       #  print(re.findall(r'\d+',number)) #Find previous letter before the final
         letter = re.findall('[a-zA-Z]', letter)
         number = re.findall(r'\d+',number)
-        print(letter[0])
-        print(number[0])
+   ##     print(letter[0])
+ ##       print(number[0])
     if int(number[0]) == 0:
         letter.append(0)
         return letter
@@ -135,7 +141,7 @@ def Scalated(order):
 #########################################             START OF CODE           ######################################
 
 Initial = input("Enter First Letter:")
-print("Username is: " + Final)
+print("Initial is: " + Initial)
 Final = input("Enter Letter to Find:")
 print("Final is: " + Final)
 
@@ -159,7 +165,7 @@ while boolean != 0:
     d.insert(0,Final)
     if len(bsearch) > 1:
         boolean = 0
-print(d)
+#print(d)
 
 escrevercusto(d,mystring_value_soma)
 
