@@ -134,7 +134,6 @@ def Scalated(order):
     if int(number[0]) == 0:
         letter.append(0)
         return letter
-        
     else:
         return letter    
        # print("An exception occurred")
@@ -156,7 +155,7 @@ while boolean != 1:
     contador += 1
     iteration(Initial, mystring_value_soma)
     array_sorted = sortlist(b)
-    tupple(2, array_sorted)
+    valuef = tupple(2, array_sorted)
     Initial = tupple(1, array_sorted)
     mystring_value_soma = remove(array_sorted)
     if Initial == "FOUND":
