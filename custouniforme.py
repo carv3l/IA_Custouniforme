@@ -21,12 +21,10 @@ d = []
 mystring_value_soma = 0
 Final = ""
 boolean = 0
-Keyword = "FOUND"
 contador = 0
 
 
 ###########################        FUNÇÕES              ############################################
-
 
 
 def sortlist(listarray):
@@ -131,8 +129,6 @@ def Scalated(order):
         return letter
     else:
         return letter    
-       # print("An exception occurred")
-
 
 # key=lambda x: x[1]
 
@@ -165,18 +161,6 @@ while boolean != 0:
         boolean = 0
 print(d)
 
-
-
-
 escrevercusto(d,mystring_value_soma)
-
-# sortlist(b)
-
-
-# print(array_sorted)
-
-
-# print("Username is: " + username)
-
 
 k = input("Press key to exit")
