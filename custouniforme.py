@@ -86,7 +86,7 @@ def tupple(operation, listarray):
             mystring = listarray[j][0]
             value = listarray[j][1]
             c.append([mystring[1], value])
-        print("",contador,"|",c)
+       # print("",contador,"|",c)
         generatetofile(c, contador)
 
  
@@ -165,7 +165,9 @@ while boolean != 0:
     d.insert(0,Final)
     if len(bsearch) > 1:
         boolean = 0
-#print(d)
+
+print("SOLUCAO: ",d)
+print("CUSTO: ",mystring_value_soma)
 
 escrevercusto(d,mystring_value_soma)
 
