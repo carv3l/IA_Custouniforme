@@ -23,16 +23,16 @@ Final = ""
 boolean = 0
 Keyword = "FOUND"
 contador = 0
-valuef = 0
 
 
 ###########################        FUNÇÕES              ############################################
+
+
 
 def sortlist(listarray):
     listarray.sort(key=lambda x: x[1])
     print("This is Sorted", listarray)
     return listarray
-
 
 def iteration(Initial, value):
     for j in range(len(a[0])):
@@ -62,7 +62,7 @@ def generatetofile(c_list, contador):
 def escrevercusto(sequencia, custo):
  with open('your_file.txt', 'a') as f:
         f.write("\n")
-        f.write("SOLUÇÃO \n")
+        f.write("SOLUCAO \n")
         f.write("%s" % sequencia)
         f.write("\n")
         f.write("CUSTO \n")
@@ -74,9 +74,8 @@ def tupple(operation, listarray):
         if mystring[1] == Final:
             mystring = "FOUND"
             return mystring
-        # mystring_value = a[1][j]I
-
         return mystring[1]
+    
     if operation == 2:
         c = []
         for j in range(len(listarray)):  # Array Size
@@ -85,7 +84,7 @@ def tupple(operation, listarray):
             c.append([mystring[1], value])
     #   print("",contador,"|",c)
         generatetofile(c, contador)
-        return value
+
  
 def Scalate(order):
     with open('your_file.txt', 'r') as searchfile:
@@ -100,10 +99,6 @@ def Scalate(order):
                 x = line
                 partname = x[0:-1]
     print("LINE IS:", partname)
-
-    # if "PART SIZE" in line:
-    #    y = line
-    #   partsize = y[18:-1]
 
 
 def Scalated(order):
@@ -155,13 +150,12 @@ while boolean != 1:
     contador += 1
     iteration(Initial, mystring_value_soma)
     array_sorted = sortlist(b)
-    valuef = tupple(2, array_sorted)
-    Initial = tupple(1, array_sorted)
+    tupple(2, array_sorted)
+    Initial= tupple(1, array_sorted)
     mystring_value_soma = remove(array_sorted)
     if Initial == "FOUND":
         boolean = 1
 d.append(Final)
-
 
 while boolean != 0:
     bsearch = Scalated(Final)
@@ -171,7 +165,10 @@ while boolean != 0:
         boolean = 0
 print(d)
 
-escrevercusto(d,valuef)
+
+
+
+escrevercusto(d,mystring_value_soma)
 
 # sortlist(b)
 
