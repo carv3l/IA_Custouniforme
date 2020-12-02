@@ -38,6 +38,15 @@ def sortlist(listarray):
     #print("This is Sorted", listarray)
     return listarray
 
+def possiblepaths(array,Final):
+    soma = 0
+    for j in range(len(array[0])):
+        if Final in array[0][j]:
+            print("Value",array[0][j])
+            soma+=1
+    soma=int(soma/2)
+    print("Caminhos possiveis:", soma)
+
 def iteration(Initial, value):
     for j in range(len(a[0])):
         if Initial in a[0][j]:
@@ -144,6 +153,10 @@ Initial = input("Enter First Letter:")
 print("Initial is: " + Initial)
 Final = input("Enter Letter to Find:")
 print("Final is: " + Final)
+
+#
+possiblepaths(a,Final)
+
 
 c = [[Initial, 0]]
 generatetofile(c, contador)
