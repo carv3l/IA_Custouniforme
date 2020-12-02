@@ -23,6 +23,8 @@ b = []
 c = []
 d = []
 
+var_possiblepaths = 0
+
 # print(a[0][0],a[1][0])
 mystring_value_soma = 0
 Final = ""
@@ -42,10 +44,11 @@ def possiblepaths(array,Final):
     soma = 0
     for j in range(len(array[0])):
         if Final in array[0][j]:
-            print("Value",array[0][j])
+        #    print("Value",array[0][j])
             soma+=1
     soma=int(soma/2)
     print("Caminhos possiveis:", soma)
+    return soma
 
 def iteration(Initial, value):
     for j in range(len(a[0])):
@@ -154,8 +157,8 @@ print("Initial is: " + Initial)
 Final = input("Enter Letter to Find:")
 print("Final is: " + Final)
 
-#
-possiblepaths(a,Final)
+#Determinar os Caminhos possiveis até à letra final
+var_possiblepaths = possiblepaths(a,Final)
 
 
 c = [[Initial, 0]]
@@ -169,6 +172,7 @@ while boolean != 1:
     Initial= tupple(1, array_sorted)
     mystring_value_soma = remove(array_sorted)
     if Initial == "FOUND":
+
         boolean = 1
 d.append(Final)
 
