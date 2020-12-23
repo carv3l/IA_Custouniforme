@@ -172,7 +172,6 @@ while boolean != 1:
     Initial= tupple(1, array_sorted)
     mystring_value_soma = remove(array_sorted)
     if Initial == "FOUND":
-
         boolean = 1
 d.append(Final)
 
