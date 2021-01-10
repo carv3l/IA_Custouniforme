@@ -1,10 +1,13 @@
 import os
 import re
+import csv
+import numpy as np
 
 
 
 try:
     os.remove("your_file.txt")
+    os.remove("tree_file.txt")
 except:
     print("NO FILE FOUND, NO PROBLEM")
 
@@ -17,7 +20,7 @@ ML = LM = AI = IA = AH = HA = AB = BA = FE = EF = 2
 LA = AL = AK = KA = IG = JK = 1
 
 a = [["MN", "NM", "NK", "KN", "IF", "FI", "KG", "GK", "JG", "GJ", "CD", "DC", "DE", "ED", "CB", "BC", "ML", "LM", "AI", "IA", "AH", "HA", "AB", "BA",
-      "FE", "EF", "LA", "AL", "AK", "KA", "IG", "GI", "JK"], [6, 6, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1]]
+      "FE", "EF", "LA", "AL", "AK", "KA", "IG", "GI", "JK","KJ"], [6, 6, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,1]]
 
 b = []
 c = []
@@ -75,6 +78,12 @@ def generatetofile(c_list, contador):
             f.write("%s" % item)
         f.write("\n")
 
+def savetreefile(c_list):         
+    with open('tree_file.txt', 'a') as f:
+        for item in c_list:
+            f.write("%s" % item)
+        f.write("\n")
+
 def escrevercusto(sequencia, custo):
  with open('your_file.txt', 'a') as f:
         f.write("\n")
@@ -98,7 +107,7 @@ def tupple(operation, listarray):
             mystring = listarray[j][0]
             value = listarray[j][1]
             c.append([mystring[1], value])
-       # print("",contador,"|",c)
+        savetreefile(c)
         generatetofile(c, contador)
 
  
@@ -128,8 +137,9 @@ def Scalated(order):
                 index_list.append(index)
                 x = line
                 partname = x[0:-1]
+   # print(line_list)
     for index in index_list:
-    #    print("LINES:", line_list[index-1], line_list[index])
+       # print("LINES:", line_list[index-1], line_list[index])
         letter = line_list[index-1]
         number = letter[0:3]
         letter = letter[0:14]
@@ -168,6 +178,7 @@ while boolean != 1:
     contador += 1
     iteration(Initial, mystring_value_soma)
     array_sorted = sortlist(b)
+   # print(array_sorted)
     tupple(2, array_sorted)
     Initial= tupple(1, array_sorted)
     mystring_value_soma = remove(array_sorted)
