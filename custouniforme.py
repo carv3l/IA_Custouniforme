@@ -16,11 +16,11 @@ except:
 MN = NM = 6
 NK = KN = IF = FI = KG = GK = 4
 JG = GJ = CD = DC = DE = ED = CB = BC = 3
-ML = LM = AI = IA = AH = HA = AB = BA = FE = EF = 2
-LA = AL = AK = KA = IG = JK = 1
+ML = LM = AI = IA = AH = HA = AB = BA = FE = EF = FH = HF  = 2
+LA = AL = AK = KA = IG = GI = JK = KJ = 1
 
 a = [["MN", "NM", "NK", "KN", "IF", "FI", "KG", "GK", "JG", "GJ", "CD", "DC", "DE", "ED", "CB", "BC", "ML", "LM", "AI", "IA", "AH", "HA", "AB", "BA",
-      "FE", "EF", "LA", "AL", "AK", "KA", "IG", "GI", "JK","KJ"], [6, 6, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,1]]
+      "FE", "EF","FH","HF", "LA", "AL", "AK", "KA", "IG", "GI", "JK","KJ"], [6, 6, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 2,2,2,2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1,1]]
 
 b = []
 c = []
