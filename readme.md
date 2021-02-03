@@ -31,7 +31,7 @@ Após aprovação do Professor Responsável,irá se proceder à iteração por u
 
 Problemas Encontrados
 
-</del> M para E não é o melhor caminho</del>
+~~M para E não é o melhor caminho~~
 
 B para E não é o melhor caminho
 
