@@ -39,7 +39,8 @@ contador = 0
 
 
 def sortlist(listarray):
-    listarray.sort(key=lambda x: x[1])
+    listarray.sort(key=lambda x: x[1]) #1 é os valores, 0 é as letras
+    
     #print("This is Sorted", listarray)
     return listarray
 
