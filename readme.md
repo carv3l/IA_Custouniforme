@@ -31,8 +31,9 @@ Após aprovação do Professor Responsável,irá se proceder à iteração por u
 
 Problemas Encontrados
 
-M para E não é o melhor caminho
+~~ M para E não é o melhor caminho ~~
 
+B para E não é o melhor caminho
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
